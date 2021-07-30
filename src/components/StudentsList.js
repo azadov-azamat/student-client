@@ -14,9 +14,7 @@ let headers = {
 
 export default function StudentsList() {
 
-    // useEffect(() => {
-    //     StudentsList();
-    // },[]);
+    const url = "https://student-azamat-app.herokuapp.com/student"
 
     useEffect(() => {
         StudentsList();
@@ -45,7 +43,7 @@ export default function StudentsList() {
     function StudentsList() {
         setLoading(true)
         axios({
-            url: "http://localhost:8060/student/getAllStudents",
+            url: url + "/getAllStudents",
             method: "GET",
             header: headers
         }).then(res => {
@@ -67,7 +65,7 @@ export default function StudentsList() {
             address: v.address
         }
         axios({
-            url: "http://localhost:8060/student/saveStudent",
+            url:  url + "/saveStudent",
             method: "POST",
             data: student,
             header: headers
@@ -84,7 +82,7 @@ export default function StudentsList() {
         console.log(value)
         closeModal();
         axios({
-            url: "http://localhost:8060/student/deleteStudent/" + value,
+            url:  url + "/deleteStudent/" + value,
             method: "DELETE",
             header: headers
         }).then(res => {
