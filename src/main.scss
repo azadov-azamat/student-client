@@ -1,0 +1,152 @@
+/* Created azamat_azadov 7/12/2021 */
+@import "~react-toastify/dist/ReactToastify.min.css";
+@import "~react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat Black", sans-serif;
+  user-select: none;
+}
+
+.Tab {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(186,184,171,0.98);
+
+  .navbar {
+    //top: 2em;
+
+    a {
+      font-size: 1.5em;
+      color: black;
+      transition: 0.5s;
+
+      &:hover {
+        color: black;
+        transform: rotateY(-20deg);
+      }
+    }
+
+    .nav {
+      .btn {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border-radius: 12px;
+        transition: 0.7s;
+      }
+    }
+  }
+
+  .student {
+    display: flex;
+    justify-content: center;
+
+    .list-student {
+      width: 30em;
+      height: 80vh;
+      border-radius: 12px;
+      background-color: rgba(186,184,171,0.98);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      overflow: scroll;
+      .table {
+        border-radius: 12px;
+        width: 30em;
+      }
+    }
+
+    .btnStudent {
+      margin-top: -48px;
+      margin-left: 1px;
+      cursor: pointer;
+      z-index: 1000;
+      width: 479px;
+      height: 4rem;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      background-color: rgba(186,184,171,0.98);
+    }
+  }
+}
+
+.notFound {
+  width: 100%;
+  height: 100vh;
+
+  img {
+    width: 40em;
+
+  }
+}
+@media (max-width: 360px) {
+  .Tab{
+    .container{
+      margin: 0;
+      padding: 0;
+    }
+    .student {
+      display: flex;
+      justify-content: center;
+
+      .list-student {
+        width: 20em;
+        //height: 80vh;
+        .table {
+          border-radius: 12px;
+          width: 20em;
+        }
+      }
+    }
+    .btnStudent {
+      width: 19em;
+      height: 3rem;
+    }
+  }
+}
+@media (max-width: 640px), (min-width: 500px) {
+  .student {
+    display: flex;
+    justify-content: center;
+
+    .list-student {
+      width: 20em;
+      //height: 80vh;
+      .table {
+        border-radius: 12px;
+        width: 20em;
+      }
+    }
+  }
+  .notFound {
+    width: 100%;
+    height: 100vh;
+
+    img {
+      width: 25em;
+
+    }
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(213, 255, 188, 0.98);;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:rgba(9,166,0,0.98);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:rgba(9,166,0,0.98);
+}
